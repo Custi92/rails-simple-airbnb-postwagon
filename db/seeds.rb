@@ -7,10 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Flat.destroy_all
+
 Flat.create!(
-  name: 'Light & Spacious Garden Flat London',
+  name: 'Spacious Garden Flat London',
   address: '10 Clifton Gardens London W9 1DT',
-  description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
+  description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, large kitchen.',
   price_per_night: 75,
   number_of_guests: 3
 )
@@ -18,7 +21,7 @@ Flat.create!(
 Flat.create!(
   name: 'Charming Studio in Paris',
   address: '5 Rue Oberkampf, 75011 Paris, France',
-  description: 'Cozy and stylish studio perfect for a romantic getaway. Walking distance from cafés and the metro.',
+  description: 'Cozy and stylish studio perfect for a romantic getaway. Walking distance from cafés.',
   price_per_night: 90,
   number_of_guests: 2
 )

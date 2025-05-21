@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="test-typo mt-5">Our Lovely Flats</h1>
+  <div class="flat-container">
+  <% @flats.each do |flat| %>
+    <div class="flat-card">
+      <h3 class="test-typo-flat"><%= flat.name %></h3>
+      <p><%= flat.description %></p>
+      <div class="d-flex justify-content-between">
+        <p><%= flat.price_per_night %>€</p>
+        <p><%= flat.number_of_guests %> people</p>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
