@@ -1,3 +1,6 @@
+require 'json'
+require 'open-uri'
+
 # This file should ensure the existence of records required to run the application in every environment (production,
 # development, test). The code here should be idempotent so that it can be executed at any point in every environment.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
@@ -12,12 +15,12 @@ Flat.destroy_all
 puts "OK"
 
 #Generating database
-img_flat1 = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmovaway.fr%2Fblog-londres%2Ftrouver-un-logement-a-londres%2F&psig=AOvVaw0K2vh-Oz3hN7w0GcPOKj_3&ust=1748526772088000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMju6funxo0DFQAAAAAdAAAAABAE"
-img_flat2 = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.junot.fr%2Ffr%2Fbiens%2Ftype%2Fappartements-haussmanniens-paris&psig=AOvVaw07u-uD_KIUYY3EpUcrGdKn&ust=1748526109837000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNCKisGlxo0DFQAAAAAdAAAAABAE"
-img_flat3 = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fde%2Fdowntown-apartments.fr.html&psig=AOvVaw0GBZzVp4E1Mi3n3m15AG5r&ust=1748526867796000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiWnayoxo0DFQAAAAAdAAAAABAE"
-img_flat4 = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.legendaer-zermatt.com%2Ffr%2Flocation-appartement-suisse&psig=AOvVaw28hbKW-Y1J84UgjsYuPrN9&ust=1748526970301000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDJiduoxo0DFQAAAAAdAAAAABAK"
-img_flat5 = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fles-bons-plans-de-barcelone.com%2Flocation-appartement-sejour-court%2F&psig=AOvVaw2Ue2vg8Ind-NDwZLIzcOuP&ust=1748527043849000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPCQ6vyoxo0DFQAAAAAdAAAAABAL"
-img_flat6 = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fluv.studio%2Ffr%2Fprojets%2Fappartement-manhattan%2F&psig=AOvVaw3VU875Mv-NjtlwOGTjncgm&ust=1748527110197000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDv156pxo0DFQAAAAAdAAAAABAf"
+img_flat1 = "https://movaway.fr/wp-content/uploads/2020/05/201fb78cee0930e307dc7d006f93611d.jpg"
+img_flat2 = "https://images.squarespace-cdn.com/content/v1/6001ce695a503d6d70ef3775/ba8d2022-269d-4fa6-8308-b5ba9c8c70d0/paris-tour-eiffel.jpg"
+img_flat3 = "https://media-cdn.tripadvisor.com/media/photo-s/21/df/df/1d/grand-view-wohnraum.jpg"
+img_flat4 = "https://www.legendaer-zermatt.com/images/2019/02/12/legendar-zermatt_appartement-15_-der-schatz-auf-schwarzsee_03_1200px.jpg"
+img_flat5 = "https://q-xx.bstatic.com/xdata/images/hotel/max500/530014774.jpg?k=de556b92dcb4487da3f55eb9b95b544994caa0bd5c5b7fc0b5b6f74a51c9d83d&o="
+img_flat6 = "https://realty-luxe.com/wp-content/uploads/2019/03/Appartement-%C3%A0-louer-%C3%A0-New-York.jpg"
 
 puts " ====================== "
 #

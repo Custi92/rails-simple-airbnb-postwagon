@@ -1,7 +1,7 @@
 <div class="container">
   <h1 class="test-typo mt-5"><%= @flat.name %></h1>
+  <%= cl_image_tag @flat.photo.key, height: 400, width: 400, crop: :fill %>
   <div class="flat-show">
-    <%= image_tag @flat.photo %>
     <div class="description">
       <h2 class="test-typo-flat">Address</h2>
       <p><%= @flat.address %></p>
