@@ -3,4 +3,18 @@
   display: flex;
   justify-content: space-between;
   text-align: left;
+  position: relative;
+}
+.back-btn-show {
+  text-decoration: none;
+  color: white;
+  font-family: 'Molle', cursive;
+  font-size: 26px;
+  border: 3px solid black;
+  background-color: blue;
+  padding: 15px;
+  position: absolute;
+  margin-top: 20px;
+  left: 0;
+  top: 185px;
 }

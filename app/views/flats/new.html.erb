@@ -1,0 +1,12 @@
+<div class="container">
+  <%= simple_form_for(@flat, html: { class: "flat-form", multipart: true }) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.input :number_of_guests %>
+    <%= f.input :price_per_night %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Confirm to add a new flat", class: "custom-submit" %>
+    <%= link_to "Back", flats_path, class: "back-btn" %>
+  <% end %>
+</div>

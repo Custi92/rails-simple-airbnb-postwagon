@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="test-typo mt-5 mb-5"><%= @flat.name %></h1>
-  <%= cl_image_tag @flat.photo.key, height: 600, width: 600 %>
+  <%= cl_image_tag @flat.photo.key, height: 600, width: 800 %>
   <div class="flat-show mt-5">
     <div class="description">
       <h2 class="test-typo-flat">Address</h2>
@@ -14,6 +14,6 @@
       <h2 class="test-typo-flat">Price per night</h2>
       <p><%= @flat.price_per_night %>€</p>
     </div>
+    <%= link_to "Back", flats_path, class: "back-btn-show" %>
   </div>
-  <%= link_to "Back", flats_path %>
 </div>
