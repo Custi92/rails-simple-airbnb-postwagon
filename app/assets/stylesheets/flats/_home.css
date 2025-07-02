@@ -39,3 +39,9 @@
   right: 300px;
   text-decoration: none;
 }
+
+.flat-name {
+  text-decoration: none;
+  color: #960018;
+  font-weight: bold;
+}

@@ -4,7 +4,7 @@
   <div class="flat-container">
   <% @flats.each do |flat| %>
     <div class="flat-card">
-      <h3 class="test-typo-flat"><%= link_to flat.name, flat_path(flat) %></h3>
+      <h3 class="test-typo-flat"><%= link_to flat.name, flat_path(flat), class: "flat-name" %></h3>
       <p><%= flat.description %></p>
       <div class="d-flex justify-content-between">
         <p><%= flat.price_per_night %>€</p>
