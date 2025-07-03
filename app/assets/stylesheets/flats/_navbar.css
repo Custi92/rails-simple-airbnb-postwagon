@@ -1,0 +1,12 @@
+.navbar-color {
+  background-color: #960018;
+}
+.nav-item .text-color {
+  color: bisque;
+  font-weight: bold;
+}
+.placement {
+  width: 1200px;
+  display: flex;
+  justify-content: flex-end;
+}

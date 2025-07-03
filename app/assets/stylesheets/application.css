@@ -17,6 +17,11 @@
   font-family: 'Molle', cursive;
   background-color: #EF88AD !important;
 }
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* text-align: center; */
+}
 .test-typo {
   font-family: 'Molle', cursive;
   font-size: 64px;

@@ -31,6 +31,8 @@ gem "simple_form"
 gem "cloudinary"
 gem "activestorage-cloudinary-service"
 
+gem "devise"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

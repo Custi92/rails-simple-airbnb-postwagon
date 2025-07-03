@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
   </head>
   <body>
-    <%= yield %>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
+    <div class="main-container">
+      <%= yield %>
+    </div>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < 20; i++) {
