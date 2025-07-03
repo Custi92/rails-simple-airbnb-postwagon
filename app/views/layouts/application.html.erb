@@ -16,7 +16,6 @@
   </head>
   <body>
     <%= render "shared/navbar" %>
-    <%= render "shared/flashes" %>
     <div class="main-container">
       <%= yield %>
     </div>
@@ -39,5 +38,6 @@
         }
       });
     </script>
+    <%= render "shared/flashes" %>
   </body>
 </html>

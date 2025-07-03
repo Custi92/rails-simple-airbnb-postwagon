@@ -1,5 +1,6 @@
 require 'json'
 require 'open-uri'
+require 'date'
 
 # This file should ensure the existence of records required to run the application in every environment (production,
 # development, test). The code here should be idempotent so that it can be executed at any point in every environment.
@@ -11,7 +12,11 @@ require 'open-uri'
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+# Cleaning database
+print "Cleaning database..."
 Flat.destroy_all
+User.destroy_all
+Reservation.destroy_all
 puts "OK"
 
 #Generating database
@@ -102,3 +107,41 @@ flat6 = Flat.create!(
 flat6.photo.attach(io: URI.open(img_flat6), filename: 'flat6.png', content_type: 'image/png')
 flat6.save!
 puts "OK !"
+#
+puts " ====================== "
+#
+# ===== USERS
+print "Creating user 1..."
+marcus = User.new(email: "marcus@outlook.fr", password: "Bamako")
+marcus.save!
+puts "OK"
+#
+print "Creating user 2..."
+jeanne = User.new(email: "jeanne@outlook.fr", password: "password")
+jeanne.save!
+puts " OK !"
+#
+print "Creating user 3..."
+alain = User.new(email: "alain@outlook.fr", password: "password")
+alain.save!
+puts " OK !"
+#
+print "Creating user 4..."
+pierre = User.new(email: "pierre@outlook.fr", password: "password")
+pierre.save!
+puts " OK !"
+#
+puts " ====================== "
+#
+# ===== RESERVATIONS
+print "Creating reservation 1..."
+r1 = Reservation.new(flat_id: flat1.id, user_id: marcus.id, start_date: Date.new(2025, 01, 01), end_date: Date.new(2025, 01, 15), status: "Pending")
+r1.total_price = flat1.price_per_night*((r1.end_date - r1.start_date).to_i)
+r1.save!
+puts " OK !"
+#
+# End of database generation
+puts "End of generation of database"
+puts "#{Flat.count} flats generated"
+puts "#{User.count} users generated"
+puts "#{Reservation.count} reservations generated"
